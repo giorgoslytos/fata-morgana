@@ -1,0 +1,41 @@
+.container {
+  padding: 10rem 0 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin: 4rem 10rem;
+  .col1 {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+
+    img {
+      max-width: 100%;
+      object-fit: scale-down;
+    }
+  }
+  .col2 {
+    flex: 1;
+    color: #333;
+    min-width: 300px;
+    margin: 3rem 0 3rem 3rem;
+
+    h2 {
+      margin: 1rem;
+      font-family: 'EB Garamond';
+      font-size: 1.2rem;
+    }
+    p,
+    a {
+      font-family: 'Noto Sans';
+      font-size: 0.9rem;
+      margin: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    margin: 0;
+  }
+}

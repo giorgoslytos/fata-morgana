@@ -1,0 +1,24 @@
+<div class="container" [ngStyle]="{ background: color }">
+  <div class="title">
+    <img src="../../assets/img/fatamorganawhite.png" alt="" width="90px" />
+    <h1>Fata Morgana</h1>
+  </div>
+  <ul class="menu">
+    <li class="fa fa-bars ham" (click)="onhamClick()"></li>
+    <li
+      [ngClass]="{ responsive: onham }"
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+      >ΑΡΧΙΚΗ</li
+    >
+    <li [ngClass]="{ responsive: onham }">ΜΕΝΟΥ</li>
+    <li [ngClass]="{ responsive: onham }">ΚΡΑΤΗΣΗ</li>
+    <li [ngClass]="{ responsive: onham }">EVENTS</li>
+    <li
+      [routerLink]="['/contact']"
+      routerLinkActive="router-link-active"
+      [ngClass]="{ responsive: onham }"
+      >ΕΠΙΚΟΙΝΩΝΙΑ</li
+    >
+  </ul>
+</div>

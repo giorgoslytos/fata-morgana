@@ -1,0 +1,27 @@
+● src
++---● app
+|   +--● navbar
+|   |  |--navbar.component.ts|.html|.scss
+|   |  |
+|   +--● home
+|   |  |--home.component.ts|.html|.scss
+|   |  |
+|   |  +--● navbar
+|   |  |  |--navbar.component.ts|.html|.scss
+|   |  |
+|   |  +--● image-slideshow
+|   |  |  |--image-slideshow.component.ts|.html|.scss
+|   |  |
+|   +--● footer
+|   |  |--footer-list.component.ts|.html|.scss
+|   |  |
+|   +--● shared
+|   |  |--plate.service.ts
+|   |  |--plate.model.ts
+|   |
+|   |--app.module.ts (configured firebase connection)
+|
++---● environments
+|   |--environment.ts (saved firebase connection details)
+|
+|--index.html (cdn path for bootstrap and font awesome icon)

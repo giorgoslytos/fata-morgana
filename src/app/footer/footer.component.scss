@@ -1,0 +1,112 @@
+.container {
+  padding: 8rem 0rem 2rem 0rem;
+  margin: 0 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  border-top: #777 solid 1px;
+
+  p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .col1 {
+    flex: 2;
+    min-width: 300px;
+  }
+  .col2 {
+    flex: 1;
+    min-width: 300px;
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-family: 'Sacramento';
+        font-size: 4rem;
+        color: #333;
+      }
+    }
+    .social {
+      margin: 1rem 5rem;
+
+      &:hover > i {
+        opacity: 0.5;
+      }
+      &:hover i:hover {
+        opacity: 1;
+      }
+      i {
+        transition: all 0.2s linear;
+        font-size: 2rem;
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .col3 {
+    flex: 2;
+    min-width: 300px;
+  }
+}
+.footer {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 2rem 0rem;
+  padding: 2rem 8rem;
+  border-top: #777 solid 1px;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .container {
+    flex-direction: row-reverse;
+    .col1 {
+      order: 1;
+    }
+    .col2 {
+      order: 2;
+    }
+    .col3 {
+      order: 1;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    flex-flow: column;
+    .col1 {
+      order: 1;
+    }
+    .col2 {
+      flex: 2;
+      order: 2;
+
+      .title {
+        img {
+          width: 60px;
+        }
+        h1 {
+          font-family: 'Sacramento';
+          font-size: 2.5rem;
+          color: #333;
+        }
+      }
+    }
+    .col3 {
+      order: 3;
+    }
+  }
+}

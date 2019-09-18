@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  text-align: center;
+
+  margin: 0 10rem;
+
+  agm-map {
+    height: 40rem;
+    z-index: 9999;
+  }
+  .box {
+    position: absolute;
+    z-index: 9;
+    top: 1rem;
+    left: 1rem;
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    color: #333;
+
+    h2 {
+      font-size: 2rem;
+      font-family: 'Sacramento';
+      display: inline-block;
+      margin: 0 0.4rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin: 0.2rem;
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
+}

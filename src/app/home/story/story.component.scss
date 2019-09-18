@@ -1,0 +1,49 @@
+.container {
+  margin: 8rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .container-left {
+    min-width: 300px;
+    flex: 1;
+    margin: 0 4rem 0 2rem;
+    h1 {
+      font-family: 'EB Garamond';
+      margin: 3rem 4rem 3rem 3rem;
+      text-align: center;
+      font-size: 3rem;
+      color: #333;
+    }
+    p {
+      font-family: 'EB Garamond';
+      font-size: 1.3rem;
+      margin: 2rem 4rem 2rem 2rem;
+      line-height: 2rem;
+      color: #333;
+    }
+  }
+  .container-right {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+    img {
+      object-fit: scale-down;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    margin: 8rem 0;
+    .container-left {
+      margin-left: 0;
+      margin-right: 0;
+
+      p {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}

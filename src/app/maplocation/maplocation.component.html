@@ -1,0 +1,20 @@
+<div class="container">
+  <agm-map
+    [latitude]="latitude"
+    [longitude]="longitude"
+    [zoom]="zoom"
+    [gestureHandling]="'cooperative'"
+    [mapTypeControl]="true"
+    [mapTypeControlOptions]="'mapType'"
+    [scrollwheel]="null"
+  >
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+  <div class="box">
+    <img src="../../assets/img/fatamorgana.png" width="40px" alt="" />
+    <h2>Fata Morgana</h2>
+    <p>Φιλίππου 1, 546 30, Θεσσαλονίκη</p>
+    <p>Τηλ. 2313 252 122 – 698 413 2290</p>
+    <p>Email: info@fatamorgana.org</p>
+  </div>
+</div>
