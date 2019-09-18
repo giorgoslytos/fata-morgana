@@ -1,0 +1,16 @@
+<div class="container">
+  <h1
+    ><a
+      href="https://www.facebook.com/fatamorganathessaloniki/?__tn__=%2Cd%3C-R&eid=ARDj0aOOuAlRtXpo0uD2eLUwlv3I6mBt-hnR-qo_iG68wnQdd0-u1BAop5piDnGTj80WbOK9XFKOhAhC"
+      target="_blank"
+      >follow us on facebook</a
+    ></h1
+  >
+  <div class="images-container">
+    <div class="image-container" *ngFor="let item of images">
+      <a href="{{ item.src }}" target="_blank">
+        <img src="{{ item.img }}" />
+      </a>
+    </div>
+  </div>
+</div>

@@ -17,6 +17,10 @@ import { MaplocationComponent } from './maplocation/maplocation.component';
 import { googlemapsAPI } from '../googlemaps.api';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { MenuComponent } from './menu/menu.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { EventsComponent } from './events/events.component';
+import { FbImagesComponent } from './fb-images/fb-images.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { ClickOutsideModule } from 'ng-click-outside';
     ContactComponent,
     PageNotFoundComponent,
     MaplocationComponent,
-    DropdownDirective
+    DropdownDirective,
+    MenuComponent,
+    ReservationComponent,
+    EventsComponent,
+    FbImagesComponent
   ],
   imports: [
     BrowserModule,

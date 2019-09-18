@@ -9,8 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class NavbarComponent implements OnInit, OnDestroy {
   color: string;
   href: string;
-  onham: boolean;
-  contactComponent: boolean;
+  onham = false;
   currentUrl: string;
   exitBtn = false;
   @HostListener('window:scroll', []) onWindowScroll() {
@@ -18,10 +17,15 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     const verticalOffset = window.pageYOffset;
 
-    if (this.currentUrl === '/contact') {
+    if (
+      this.currentUrl === '/contact' ||
+      this.currentUrl === '/menu' ||
+      this.currentUrl === '/reservation' ||
+      this.currentUrl === '/events'
+    ) {
       this.color = '#111';
     } else {
-      if (verticalOffset >= window.innerHeight) {
+      if (verticalOffset >= window.innerHeight - 60) {
         this.color = '#111';
       } else {
         this.color = 'transparent';
@@ -35,7 +39,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentUrl = event.url; // event.url has current url
-        if (event.url === '/contact') {
+        if (
+          event.url === '/contact' ||
+          event.url === '/menu' ||
+          event.url === '/reservation' ||
+          event.url === '/events'
+        ) {
           this.color = '#111';
         } else {
           this.color = 'transparent';
@@ -58,6 +67,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     if (this.onham) {
       this.onham = !this.onham;
       this.exitBtn = !this.exitBtn;
+      console.log('onham: ' + this.onham);
+      console.log('exitBtn: ' + this.exitBtn);
     }
   }
 }

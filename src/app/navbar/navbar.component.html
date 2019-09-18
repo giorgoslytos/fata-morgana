@@ -3,7 +3,7 @@
     <img src="../../assets/img/fatamorganawhite.png" alt="" width="90px" />
     <h1>Fata Morgana</h1>
   </div>
-  <div class="menu-container">
+  <div class="menu-container" (clickOutside)="onClickedOutside($event)">
     <button
       class="hamburger hamburger--collapse"
       type="button"
@@ -18,11 +18,17 @@
       <li [routerLink]="['/home']" routerLinkActive="router-link-active"
         >ΑΡΧΙΚΗ</li
       >
-      <li>ΜΕΝΟΥ</li>
-      <li>ΚΡΑΤΗΣΗ</li>
-      <li>EVENTS</li>
+      <li [routerLink]="['/menu']" routerLinkActive="router-link-active"
+        >ΜΕΝΟΥ</li
+      >
+      <li [routerLink]="['/reservation']" routerLinkActive="router-link-active"
+        >ΚΡΑΤΗΣΗ</li
+      >
+      <li [routerLink]="['/events']" routerLinkActive="router-link-active"
+        >EVENTS</li
+      >
       <li [routerLink]="['/contact']" routerLinkActive="router-link-active"
-        >ΕΠΙΚΟΙΝΩΝΙΑ</li
+        >ΤΟΠΟΘΕΣΙΑ</li
       >
     </ul>
   </div>
