@@ -33,9 +33,39 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .container {
+    margin: 0;
+    flex-direction: column;
+    .container-left {
+      margin-left: 1rem !important;
+      margin-right: 1rem !important;
+
+      p {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1160px) {
+  .container {
+    margin: 8rem;
+    .container-left {
+      margin-left: 1rem !important;
+      margin-right: 1rem !important;
+
+      p {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
 @media screen and (max-width: 800px) {
   .container {
     margin: 8rem 0;
+    flex-direction: column;
     .container-left {
       margin-left: 0;
       margin-right: 0;

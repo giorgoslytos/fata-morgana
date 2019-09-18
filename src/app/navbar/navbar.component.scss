@@ -21,6 +21,10 @@
       font-size: 2.5rem;
     }
   }
+  .menu-container {
+    position: relative;
+    align-self: center;
+  }
   .menu {
     flex: 3;
     align-self: center;
@@ -28,7 +32,11 @@
     font-size: 1.1rem;
     padding: 0;
     display: flex;
+    flex-direction: row;
     justify-content: right;
+    margin-right: 1rem;
+    transition: all 1s ease;
+
     &:hover > li {
       opacity: 0.5;
     }
@@ -36,23 +44,53 @@
       opacity: 1;
     }
     li {
-      display: inline-block;
+      flex: 1;
       position: relative;
       padding: 0.5rem 1rem 1rem 1rem;
       cursor: pointer;
       transition: all 0.2s ease;
+      list-style-type: none;
     }
-    .ham {
-      display: none;
-      font-size: 2rem;
-    }
+  }
+  i {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
   }
 }
 
 .responsive {
-  display: inline-block !important;
+  display: inline-flex !important;
 }
 
+::ng-deep .hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #eee !important;
+}
+
+::ng-deep .hamburger {
+  background-color: transparent !important;
+}
+button {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+.is-active {
+  background: #eee;
+}
+.exitBtn {
+  display: none !important;
+}
+
+@media screen and (max-width: 1240px) {
+  .container {
+    padding: 1rem;
+  }
+}
 @media screen and (max-width: 1000px) {
   .container {
     padding: 1rem 0;
@@ -77,19 +115,26 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 910px) {
   div.container {
-    ul.menu {
+    .menu {
       flex-direction: column;
       flex: 1;
       text-align: right;
-
-      li.ham {
-        display: inline-block;
-      }
-      li {
-        display: none;
-      }
+      display: none;
     }
+    i {
+      display: block;
+      text-align: right;
+      margin: 2rem;
+    }
+  }
+  button {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    margin-top: 4rem;
   }
 }

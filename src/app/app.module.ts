@@ -16,6 +16,7 @@ import { AgmCoreModule } from '@agm/core';
 import { MaplocationComponent } from './maplocation/maplocation.component';
 import { googlemapsAPI } from '../googlemaps.api';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     BrowserModule,
     AppRoutingModule,
     SlideshowModule,
+    ClickOutsideModule,
     AgmCoreModule.forRoot({
       apiKey: googlemapsAPI
     })

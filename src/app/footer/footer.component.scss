@@ -13,11 +13,11 @@
   }
 
   .col1 {
-    flex: 2;
+    flex: 1;
     min-width: 300px;
   }
   .col2 {
-    flex: 1;
+    flex: 2;
     min-width: 300px;
 
     .title {
@@ -50,7 +50,7 @@
     }
   }
   .col3 {
-    flex: 2;
+    flex: 1;
     min-width: 300px;
   }
 }
@@ -74,13 +74,13 @@
   .container {
     flex-direction: row-reverse;
     .col1 {
-      order: 1;
+      order: 3;
     }
     .col2 {
-      order: 2;
+      order: 1;
     }
     .col3 {
-      order: 1;
+      order: 3;
     }
   }
 }
@@ -88,11 +88,11 @@
   .container {
     flex-flow: column;
     .col1 {
-      order: 1;
+      order: 3;
     }
     .col2 {
-      flex: 2;
-      order: 2;
+      // flex: 2;
+      order: 1;
 
       .title {
         img {

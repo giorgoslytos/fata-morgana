@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   onham: boolean;
   contactComponent: boolean;
   currentUrl: string;
+  exitBtn = false;
   @HostListener('window:scroll', []) onWindowScroll() {
     // do some stuff here when the window is scrolled
 
@@ -47,6 +48,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   onhamClick() {
     this.onham = !this.onham;
+    this.exitBtn = !this.exitBtn;
+
     console.log(this.onham);
+  }
+
+  onClickedOutside(e: Event) {
+    console.log('Clicked outside:', e.target);
+    if (this.onham) {
+      this.onham = !this.onham;
+      this.exitBtn = !this.exitBtn;
+    }
   }
 }

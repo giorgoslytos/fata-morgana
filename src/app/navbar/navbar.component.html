@@ -3,22 +3,29 @@
     <img src="../../assets/img/fatamorganawhite.png" alt="" width="90px" />
     <h1>Fata Morgana</h1>
   </div>
-  <ul class="menu">
-    <li class="fa fa-bars ham" (click)="onhamClick()"></li>
-    <li
-      [ngClass]="{ responsive: onham }"
-      [routerLink]="['/home']"
-      routerLinkActive="router-link-active"
-      >ΑΡΧΙΚΗ</li
+  <div class="menu-container">
+    <button
+      class="hamburger hamburger--collapse"
+      type="button"
+      (click)="onhamClick()"
+      [class.is-active]="onham"
     >
-    <li [ngClass]="{ responsive: onham }">ΜΕΝΟΥ</li>
-    <li [ngClass]="{ responsive: onham }">ΚΡΑΤΗΣΗ</li>
-    <li [ngClass]="{ responsive: onham }">EVENTS</li>
-    <li
-      [routerLink]="['/contact']"
-      routerLinkActive="router-link-active"
-      [ngClass]="{ responsive: onham }"
-      >ΕΠΙΚΟΙΝΩΝΙΑ</li
-    >
-  </ul>
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <ul class="menu" [ngClass]="{ responsive: onham }">
+      <li [routerLink]="['/home']" routerLinkActive="router-link-active"
+        >ΑΡΧΙΚΗ</li
+      >
+      <li>ΜΕΝΟΥ</li>
+      <li>ΚΡΑΤΗΣΗ</li>
+      <li>EVENTS</li>
+      <li [routerLink]="['/contact']" routerLinkActive="router-link-active"
+        >ΕΠΙΚΟΙΝΩΝΙΑ</li
+      >
+    </ul>
+  </div>
 </div>
+<!-- (clickOutside)="onClickedOutside($event)" -->
+<!-- [ngClass]="{ responsive: onham }" -->
