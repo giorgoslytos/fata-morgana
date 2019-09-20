@@ -1,0 +1,120 @@
+.container {
+  position: relative;
+  top: -100vh;
+  h1 {
+    color: #c6a391;
+    font-size: 4rem;
+    font-family: 'EB Garamond';
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 100;
+  }
+  button {
+    position: absolute;
+    top: 65vh;
+    // transform: translateX(-50%);
+    // left: calc(50% - 1rem);
+    left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 1rem 2.5rem;
+    color: white;
+    border: none;
+    font-family: 'Noto Sans';
+    font-size: 1.2rem;
+    background-color: rgba(#000, 0.6);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.41);
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #73baae;
+      transform: scaleY(0);
+      transform-origin: 50%;
+      transition-property: transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+      border-radius: 3px;
+    }
+    &:hover {
+      &:before {
+        transform: scaleY(1);
+      }
+    }
+    &:active {
+      position: absolute;
+      top: calc(65vh + 1px);
+      box-shadow: 0px 1px 5px 1px rgba(#73baae, 0.41);
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 90vh;
+    left: calc(50% - 1rem);
+    text-align: center;
+    padding: 3rem 0;
+    cursor: pointer;
+
+    &:hover a {
+      color: #c6a391 !important;
+    }
+    a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 2rem;
+    }
+  }
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+}
+.typed-container {
+  position: absolute;
+  z-index: 99;
+  translate: (50%, 50%);
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 40vh;
+
+  .typed-element {
+    color: #fff;
+    font-family: 'EB Garamond';
+    text-shadow: 1px 1px #000;
+    font-size: 3rem;
+    color: #c6a391;
+    text-align: center;
+  }
+  ::ng-deep .typed-cursor {
+    color: #fff;
+    font-family: 'EB Garamond';
+    text-shadow: 1px 1px #000;
+    font-size: 3rem;
+    color: #c6a391;
+  }
+}

@@ -1,0 +1,130 @@
+<div class="container" id="reservation">
+  <div class="title">
+    <h1>ΚΑΝΤΕ ΚΡΑΤΗΣΗ</h1>
+    <h2>- ώρες λειτουργίας -</h2>
+    <p>Τρίτη – Σάββατο 12:30 – 01:00, Δευτέρα κλειστά</p>
+  </div>
+
+  <form
+    [formGroup]="myForm"
+    action=""
+    class="form-container"
+    (ngSubmit)="submitHandler()"
+    [hidden]="success"
+  >
+    <mat-grid-list
+      [cols]="breakpoint"
+      (window:resize)="onResize($event)"
+      rowHeight="4rem"
+      gutterSize="2rem"
+    >
+      <mat-grid-tile>
+        <div class="col1-3 name">
+          <mat-form-field>
+            <input matInput placeholder="Όνομα" formControlName="name" />
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <div class="col1-3 tel">
+          <mat-form-field class="example-full-width">
+            <span matPrefix>+30 &nbsp;</span>
+            <input
+              type="tel"
+              matInput
+              placeholder="Τηλέφωνο"
+              formControlName="tel"
+              maxlength="10"
+            />
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="col1-3 email">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="το email σας"
+              formControlName="email"
+              required
+            />
+            <mat-error *ngIf="email.valid">{{ getErrorMessage() }}</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="col1-3 date">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              [matDatepickerFilter]="myFilter"
+              [matDatepicker]="picker"
+              placeholder="Ημερομηνία"
+              formControlName="date"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="col1-3 time">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Ώρα"
+              formControlName="time"
+              type="time"
+            />
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="col1-3 people">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Αριθμός ατόμων"
+              formControlName="people"
+              type="number"
+              min="1"
+            />
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list [cols]="1" rowHeight="4rem" gutterSize="4rem">
+      <mat-grid-tile>
+        <div class="col1-3 comment">
+          <mat-form-field>
+            <textarea
+              matInput
+              placeholder="Το μήνυμα σας"
+              formControlName="comment"
+            ></textarea>
+          </mat-form-field>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="example-button-row">
+          <button
+            mat-raised-button
+            color="primary"
+            class="btn"
+            [disabled]="myForm.invalid"
+            >ΒΡΕΙΤΕ ΤΡΑΠΕΖΙ</button
+          >
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</div>
+<div *ngIf="success" class="success">
+  Η κράτησή σας απεστάλει!
+</div>
+<!-- Value: {{ myForm.value | json }} -->

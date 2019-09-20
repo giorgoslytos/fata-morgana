@@ -11,8 +11,6 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', redirectTo: '' },
   { path: 'menu', component: MenuComponent },
-  { path: 'reservation', component: ReservationComponent },
-  { path: 'events', component: EventsComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

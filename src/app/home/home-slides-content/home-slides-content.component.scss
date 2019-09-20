@@ -1,15 +1,15 @@
 .container {
   position: relative;
+  top: -100vh;
 
   .typed-container {
     position: absolute;
     z-index: 99;
-    top: 40%;
     translate: (50%, 50%);
     text-align: center;
     width: 100%;
     left: 0;
-
+    top: 40vh;
     .typed-element {
       color: #fff;
       font-family: 'EB Garamond';
@@ -26,11 +26,13 @@
       color: #c6a391;
     }
   }
+
   button {
     position: absolute;
-    z-index: 99;
-    top: 55%;
-    left: 50%;
+    top: 65vh;
+    // transform: translateX(-50%);
+    // left: calc(50% - 1rem);
+    left: 50vw;
     transform: translateX(-50%);
     text-align: center;
     padding: 1rem 2.5rem;
@@ -65,14 +67,14 @@
     }
     &:active {
       position: absolute;
-      top: calc(55% + 1px);
+      top: calc(65vh + 1px);
       box-shadow: 0px 1px 5px 1px rgba(#73baae, 0.41);
     }
   }
 
   .arrow {
     position: absolute;
-    bottom: 0%;
+    top: 90vh;
     left: calc(50% - 1rem);
     text-align: center;
     padding: 3rem 0;

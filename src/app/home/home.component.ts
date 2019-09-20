@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Plate } from '../shared/plate.model';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +6,6 @@ import { Plate } from '../shared/plate.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  plates: Array<Plate>;
-
   constructor() {}
 
   ngOnInit() {}

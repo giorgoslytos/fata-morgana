@@ -1,0 +1,41 @@
+<app-menu-slides-content></app-menu-slides-content>
+<div class="container" id="main-menu">
+  <div class="tab-container">
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Ορεκτικά" mat-align-tab="center">
+        <div class="label-container">
+          <h1>ΟΡΕΚΤΙΚΑ</h1>
+          <div class="plate-container">
+            <div class="flex-plate" *ngFor="let item of appetizer">
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Κυρίως Πιάτα">
+        <div class="label-container">
+          <h1>ΚΥΡΙΩΣ ΠΙΑΤΑ</h1>
+          <div class="plate-container">
+            <div class="flex-plate" *ngFor="let item of mainDish">
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Επιδόρπια">
+        <div class="label-container">
+          <h1>ΕΠΙΔΟΡΠΙΑ</h1>
+          <div class="plate-container">
+            <div class="flex-plate" *ngFor="let item of dessert">
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+<app-fb-images></app-fb-images>

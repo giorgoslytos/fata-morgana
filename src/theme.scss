@@ -1,0 +1,32 @@
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$fata-morgana-primary: mat-palette($mat-teal, 200);
+$fata-morgana-accent: mat-palette($mat-pink, A200, A100, A400);
+$fata-morgana-warn: mat-palette($mat-deep-orange);
+
+$fata-morgana-theme: mat-light-theme(
+  $fata-morgana-primary,
+  $fata-morgana-accent,
+  $fata-morgana-warn
+);
+
+// Include the default theme styles.
+@include angular-material-theme($fata-morgana-theme);
+
+// @import '~@angular/material/theming';
+// @include mat-core();
+
+// $my-app-primary: mat-palette($mat-deep-orange);
+// $my-app-accent: mat-palette($mat-deep-orange, 500, 900, A700);
+// $my-app-warn: mat-palette($mat-deep-orange);
+
+// $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+// @include angular-material-theme($my-app-theme);

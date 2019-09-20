@@ -1,0 +1,74 @@
+.container {
+  padding-top: 6rem;
+  .tab-container {
+    margin: 4rem;
+
+    .label-container {
+      text-align: center;
+      margin: 2rem;
+
+      h1 {
+        font-family: 'EB Garamond';
+        font-size: 2rem;
+        font-weight: 100;
+        margin: 1rem;
+      }
+      .plate-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .flex-plate {
+          text-align: left;
+          margin: 2rem;
+          width: 40%;
+          h2 {
+            margin: 1rem;
+            font-family: 'EB Garamond';
+          }
+          p {
+            margin: 0.9rem;
+            font-size: 0.9rem;
+            font-family: 'Noto Sans';
+          }
+        }
+      }
+    }
+  }
+}
+::ng-deep .mat-tab-label-content {
+  font-size: 1.2rem;
+  font-family: 'EB Garamond';
+  color: #000;
+}
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    .tab-container {
+      margin: 0;
+
+      .label-container {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    .tab-container {
+      .label-container {
+        h1 {
+        }
+        .plate-container {
+          .flex-plate {
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
