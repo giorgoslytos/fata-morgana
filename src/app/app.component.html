@@ -1,5 +1,5 @@
-<app-navbar></app-navbar>
-<app-image-slideshow></app-image-slideshow>
+<app-navbar (eventClicked)="imageSlideshow.onSlide($event)"></app-navbar>
+<app-image-slideshow #imageSlideshow></app-image-slideshow>
 <router-outlet></router-outlet>
 <app-reservation></app-reservation>
 <app-footer></app-footer>

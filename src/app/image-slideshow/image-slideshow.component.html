@@ -1,14 +1,17 @@
 <!-- ng-simple-slideshow from npm is used here-->
 <div class="container">
   <slideshow
+    #slideshow
     [height]="height"
     [minHeight]="'525px'"
-    [autoPlay]="true"
     [autoPlayInterval]="autoPlayInterval"
-    [showArrows]="true"
     [imageUrls]="images"
+    [showArrows]="false"
     [lazyLoad]="images?.length > 1"
     [autoPlayWaitForLazyLoad]="true"
   >
   </slideshow>
 </div>
+
+<!-- [autoPlay]="true"
+[showArrows]="true" -->

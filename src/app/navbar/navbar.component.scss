@@ -50,6 +50,10 @@
       cursor: pointer;
       transition: all 0.2s ease;
       list-style-type: none;
+
+      &:focus {
+        border: none;
+      }
     }
   }
   i {

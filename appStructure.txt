@@ -7,26 +7,41 @@
 |   |
 |   +--● home
 |   |  |--home.component.ts|.html|.scss
-|   |  |
-|   |  +--● image-slideshow
-|   |     |--image-slideshow.component.ts|.html|.scss
+|   |  +--● home-slides-content
+|   |  |  |--home-slides-content.ts|.html|.scss
 |   |
 |   +--● menu
 |   |  |--menu.component.ts|.html|.scss
+|   |  +--● menu-slides-content
+|   |  |  |--menu-slides-content.ts|.html|.scss
 |   |
-|   +--● footer
-|   |  |--footer-list.component.ts|.html|.scss
+|   +--● contact
+|   |  |--contact-list.component.ts|.html|.scss
+|   |  +--● contact-slides-content
+|   |  |  |--contact-slides-content.ts|.html|.scss
 |   |
+|   +--● page-not-found
+|   |  |--page-not-found.component.ts|.html|.scss
+|   |
+|   +--● reservation
+|   |  |--reservation.component.ts|.html|.scss
+|   |
+|   +--● image-slideshow
+|   |  |--image-slideshow.component.ts|.html|.scss
+|   |  |
 |   +--● fbImages
 |   |  |--fbImages-list.component.ts|.html|.scss
 |   |
+|   +--● footer
+|   |  |--footer-list.component.ts|.html|.scss
+|   |  |
 |   +--● shared
-|   |  |--plate.service.ts
-|   |  |--plate.model.ts
 |   |  |--iimage.interface.ts
-|   |  |--dropdown.directive.ts
+
 |
 +---● environments
 |   |--environment.ts (saved firebase connection details)
 |
-|--index.html (cdn path for bootstrap and font awesome icon)
+|--index.html
+|--firebaseKey.api.ts
+|--googlemaps.api.ts

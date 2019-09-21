@@ -10,7 +10,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { StoryComponent } from './home/story/story.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { MaplocationComponent } from './maplocation/maplocation.component';
@@ -18,7 +17,6 @@ import { googlemapsAPI } from '../googlemaps.api';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { MenuComponent } from './menu/menu.component';
 import { ReservationComponent } from './reservation/reservation.component';
-import { EventsComponent } from './events/events.component';
 import { FbImagesComponent } from './fb-images/fb-images.component';
 import { HomeSlidesContentComponent } from './home/home-slides-content/home-slides-content.component';
 import { MenuSlidesContentComponent } from './menu/menu-slides-content/menu-slides-content.component';
@@ -41,11 +39,9 @@ import { environment } from 'src/environments/environment';
     StoryComponent,
     FooterComponent,
     ContactComponent,
-    PageNotFoundComponent,
     MaplocationComponent,
     MenuComponent,
     ReservationComponent,
-    EventsComponent,
     FbImagesComponent,
     MenuSlidesContentComponent,
     HomeSlidesContentComponent,
